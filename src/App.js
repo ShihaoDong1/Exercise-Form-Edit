@@ -6,8 +6,13 @@ function App() {
   return (
     <>
       <div>
-        <label>FirstName: {this.state.firstname}</label>
-        <label>LastName: {this.state.lastname}</label> 
+        <p>
+          <label>FirstName: </label>
+        </p>
+        <p>
+          <label>LastName: </label>
+        </p>
+       
         <button>Edit</button>
       </div>
     </>
