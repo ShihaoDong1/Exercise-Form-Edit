@@ -9,23 +9,31 @@ class UserInfo  extends Component {
     }
 
 
-    changeInfo() {
+    changeInfo = () => {
         
     }
 
     render() {
-      return(
-      <div >
-          <p>
-              <label>FirstName: </label>
-          </p>
-          <p>
-              <label>LastName: </label>
-          </p>
-          <button onClick={changeInfo}>Edit</button>
-       </div>
-      );
+        if(this.state.didClickEdit) {
+
+        }
+        else {
+            return(
+                <div >
+                    <p>
+                        <label>FirstName: </label>
+                    </p>
+                    <p>
+                        <label>LastName: </label>
+                    </p>
+                    <button onClick={this.changeInfo}>Edit</button>
+                </div>
+            );
+        }
+
+
+      
     }
 }
 
-  export default Form
+  export default UserInfo
