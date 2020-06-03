@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Exercise-Form-Edit/static/css/main.e90a9ddc.chunk.css",
+    "main.js": "/Exercise-Form-Edit/static/js/main.1caef7a1.chunk.js",
+    "main.js.map": "/Exercise-Form-Edit/static/js/main.1caef7a1.chunk.js.map",
+    "runtime-main.js": "/Exercise-Form-Edit/static/js/runtime-main.528da2dc.js",
+    "runtime-main.js.map": "/Exercise-Form-Edit/static/js/runtime-main.528da2dc.js.map",
+    "static/js/2.4991f22d.chunk.js": "/Exercise-Form-Edit/static/js/2.4991f22d.chunk.js",
+    "static/js/2.4991f22d.chunk.js.map": "/Exercise-Form-Edit/static/js/2.4991f22d.chunk.js.map",
+    "index.html": "/Exercise-Form-Edit/index.html",
+    "precache-manifest.0c352e066ba1de8bddfc28ed15d4ba3b.js": "/Exercise-Form-Edit/precache-manifest.0c352e066ba1de8bddfc28ed15d4ba3b.js",
+    "service-worker.js": "/Exercise-Form-Edit/service-worker.js",
+    "static/css/main.e90a9ddc.chunk.css.map": "/Exercise-Form-Edit/static/css/main.e90a9ddc.chunk.css.map",
+    "static/js/2.4991f22d.chunk.js.LICENSE.txt": "/Exercise-Form-Edit/static/js/2.4991f22d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Exercise-Form-Edit/static/media/logo.ee7cd8ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.528da2dc.js",
+    "static/js/2.4991f22d.chunk.js",
+    "static/css/main.e90a9ddc.chunk.css",
+    "static/js/main.1caef7a1.chunk.js"
+  ]
+}
