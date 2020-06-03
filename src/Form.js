@@ -1,59 +1,65 @@
 import React, { Component } from "react";
 
-class UserInfo  extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            firstName: "",
-            lastName: "",
-            didClickEdit:false
-        }
-    }
+class UserInfo extends Component {
+  constructor(props) {
+		super(props);
+		this.state = {
+			firstName: "",
+			lastName: "",
+			didClickEdit: false
+		};
+		
+		this.blank = this.state;
+  }
+  
+  changeInfo  = () => {
+		this.setState({ 
+			didClickEdit: true
+		});
+	};
 
-    changeInfo = () => {
-        this.setState({
-            didClickEdit: true
-        })
-    }
+	saveChange = () => {
+	this.setState({ 
+			didClickEdit: false
+		});
+	}
 
-    saveChange = () => {
+	cancelChange = () => {
+	this.setState({ 
+			didClickEdit: false,
+			...this.blank
+		});
+	}
 
-    }
+	handleNameChange = (event) => {
+		this.setState({ [event.target.name]: event.target.value });
+  }
 
-    cancelChange = () => {
-
-
-    }
-
-    handleNameChange = () => {
-        
-    }
-
-    render() {
-        if(this.state.didClickEdit) {
-            return (
-                <form>
-                    <input type="text" firstName={this.state.firstName} onChange={this.handleNameChange}/>
-                    <input type="text" lastName={this.state.lastName} onChange={this.handleNameChange}/>
-                    <button onClick={this.saveChange}>Save</button>
-                    <button onClick={this.cancelChange}>Cancel</button>
-                </form>
-            );
-        }
-        else {
-            return(
-                <div >
-                    <p>
-                        <label>FirstName: </label>
-                    </p>
-                    <p>
-                        <label>LastName: </label>
-                    </p>
-                    <button onClick={this.changeInfo}>Edit</button>
-                </div>
-            );
-        }
-    }
+  render() {
+	if (this.state.didClickEdit) {
+	  return (
+			<form>
+				<input type="text" name="firstName" onChange={this.handleNameChange}/>
+				<input type="text" name="lastName" onChange={this.handleNameChange}/>
+				<button onClick={this.saveChange}>Save</button>
+				<button onClick={this.cancelChange}>Cancel</button>
+			</form>
+		);
+	}
+	else {
+	  return (
+			<div >
+				<p>
+				<label>First Name: {this.state.firstName} </label>
+				</p>
+				<p>
+				<label>Last Name: {this.state.lastName}</label>
+				</p>
+				<button onClick={this.changeInfo}>Edit</button>
+			</div>
+			);
+		}
+	}
 }
 
-export default UserInfo
+export default UserInfo;
