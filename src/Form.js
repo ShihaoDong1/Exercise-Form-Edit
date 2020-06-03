@@ -10,12 +10,14 @@ class UserInfo  extends Component {
 
 
     changeInfo = () => {
-        
+        this.setState({
+            didClickEdit: true
+        })
     }
 
     render() {
         if(this.state.didClickEdit) {
-
+            
         }
         else {
             return(
@@ -36,4 +38,4 @@ class UserInfo  extends Component {
     }
 }
 
-  export default UserInfo
+export default UserInfo
