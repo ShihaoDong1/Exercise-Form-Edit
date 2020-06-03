@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 class Form extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			firstName: "",
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: "",
       lastName: "",
       isClickEdit: false,
     };
@@ -18,14 +18,14 @@ class Form extends Component {
     });
   };
 
-	handleNameChange(event) {
+  handleNameChange(event) {
     this.setState({
       firstName: event.target.value,
       lastName: event.target.value
     });
   }
-	
-	render() {
+  
+  render() {
     const edit = this.state.isClickEdit === false ? 
     (
       <>
