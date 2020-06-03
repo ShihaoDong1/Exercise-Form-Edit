@@ -4,10 +4,11 @@ class UserInfo  extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            firstName: "",
+            lastName: "",
             didClickEdit:false
         }
     }
-
 
     changeInfo = () => {
         this.setState({
@@ -15,9 +16,29 @@ class UserInfo  extends Component {
         })
     }
 
+    saveChange = () => {
+
+    }
+
+    cancelChange = () => {
+
+
+    }
+
+    handleNameChange = () => {
+        
+    }
+
     render() {
         if(this.state.didClickEdit) {
-            
+            return (
+                <form>
+                    <input type="text" firstName={this.state.firstName} onChange={this.handleNameChange}/>
+                    <input type="text" lastName={this.state.lastName} onChange={this.handleNameChange}/>
+                    <button onClick={this.saveChange}>Save</button>
+                    <button onClick={this.cancelChange}>Cancel</button>
+                </form>
+            );
         }
         else {
             return(
@@ -32,9 +53,6 @@ class UserInfo  extends Component {
                 </div>
             );
         }
-
-
-      
     }
 }
 
