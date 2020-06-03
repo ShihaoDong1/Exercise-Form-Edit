@@ -1,27 +1,31 @@
 import React, { Component } from "react";
 
-class UserInfo extends Component {
+class UserInfo  extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            didClickEdit:false
+        }
+    }
+
+
+    changeInfo() {
+        
+    }
+
     render() {
-        return (
-            <div>
-                <label>FirstName: {this.state.firstname}</label>
-                <label>LastName: {this.state.lastname}</label> 
-                <button>Edit</button>
-            </div>
-        );
-      }
+      return(
+      <div >
+          <p>
+              <label>FirstName: </label>
+          </p>
+          <p>
+              <label>LastName: </label>
+          </p>
+          <button onClick={changeInfo}>Edit</button>
+       </div>
+      );
+    }
 }
 
-
-class Form extends Component {
-    render() {
-        return (
-            <div>
-                //This will include the form html
-            </div>
-        );
-      }
-}
-
-export default UserInfo
-export default Form
+  export default Form
